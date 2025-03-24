@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground transition-all duration-300;
+  }
+
+  .fade-in {
+    @apply animate-fadeIn;
+  }
+
+  .slide-in {
+    @apply animate-slideIn;
+  }
+}
