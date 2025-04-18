@@ -1,10 +1,38 @@
 import express, { type Request, Response, NextFunction } from "express";
+import session from "express-session";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import MemoryStore from "memorystore";
+import { DiscordUser } from "@shared/schema";
+
+// Extend express-session types
+declare module "express-session" {
+  interface SessionData {
+    user?: DiscordUser;
+    token?: string;
+  }
+}
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Create memory store for sessions
+const MemoryStoreSession = MemoryStore(session);
+
+// Configure session middleware
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'discord-token-checker-secret',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { 
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  },
+  store: new MemoryStoreSession({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  })
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();
