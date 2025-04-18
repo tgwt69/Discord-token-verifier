@@ -4,7 +4,7 @@
 const axios = require('axios');
 
 // Your dummy server URL (update this with your actual dummy server URL after deployment)
-const DUMMY_SERVER_URL = 'https://your-dummy-server.onrender.com/ping';
+const DUMMY_SERVER_URL = 'https://dummy-repo2.onrender.com';
 
 // Function to ping the dummy server
 async function pingDummyServer() {
