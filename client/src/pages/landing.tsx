@@ -67,7 +67,7 @@ export default function LandingPage() {
         <p className="text-gray-500 dark:text-gray-400 mb-1">Created by</p>
         <h2 className="text-xl font-semibold text-primary">_imjay</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
-          Join our Discord server at <a href="https://discord.gg/AeDeKW66wT" className="text-primary hover:underline">discord.gg/DbUKdVQR</a>
+          Join our Discord server at <a href="https://discord.gg/AeDeKW66wT" className="text-primary hover:underline">discord.gg/AeDeKW66wT</a>
         </p>
       </motion.div>
       
