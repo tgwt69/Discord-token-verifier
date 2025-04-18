@@ -20,7 +20,7 @@ A modern web-based Discord token validation tool that checks token authenticity 
 
 ## Credits
 
-This project was originally created by _imjay
+This project was originally created by _imjay and enhanced with modern UI and additional features.
 
 ## Getting Started
 
