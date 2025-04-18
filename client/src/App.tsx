@@ -73,7 +73,7 @@ function Footer() {
     >
       <div className="container px-4">
         <p>© {new Date().getFullYear()} Discord Token Checker</p>
-        <p className="mt-1">Created by _imjay • Join our Discord server at <a href="https://discord.gg/DbUKdVQR" className="text-primary hover:underline">discord.gg/DbUKdVQR</a></p>
+        <p className="mt-1">Created by _imjay • Join our Discord server at <a href="https://discord.gg/AeDeKW66wT" className="text-primary hover:underline">discord.gg/DbUKdVQR</a></p>
       </div>
     </motion.footer>
   );
